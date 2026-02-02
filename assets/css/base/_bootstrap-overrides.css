@@ -1,0 +1,160 @@
+/* ============================================
+   MARGADARSI - Bootstrap Overrides
+   assets/css/base/_bootstrap-overrides.css
+   ============================================ */
+
+/* Override Bootstrap Primary Colors */
+.btn-primary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-white);
+    font-family: var(--font-accent);
+    font-weight: var(--fw-semibold);
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: var(--fs-sm);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-maroon-light);
+    border-color: var(--color-maroon-light);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    background-color: transparent;
+    font-family: var(--font-accent);
+    font-weight: var(--fw-semibold);
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: var(--fs-sm);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+    font-family: var(--font-accent);
+    font-weight: var(--fw-semibold);
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: var(--fs-sm);
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    background-color: var(--color-gold-dark);
+    border-color: var(--color-gold-dark);
+    color: var(--color-white);
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: var(--fs-base);
+}
+
+.btn-sm {
+    padding: 0.625rem 1.5rem;
+    font-size: var(--fs-xs);
+}
+
+@media (max-width: 576px) {
+
+    .btn-primary,
+    .btn-outline-primary,
+    .btn-accent {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--fs-xs);
+    }
+}
+
+/* Card Customization - Clean & Minimal */
+.card {
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--transition-base);
+    overflow: hidden;
+    background-color: var(--color-white);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.card-img-top {
+    border-radius: 0;
+    transition: transform var(--transition-slow);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+    border: 2px solid var(--color-gray-300);
+    border-radius: var(--radius-md);
+    padding: 0.875rem 1.25rem;
+    font-size: var(--fs-base);
+    transition: all var(--transition-base);
+    background-color: var(--color-white);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(184, 149, 106, 0.1);
+    outline: none;
+}
+
+.form-label {
+    font-weight: var(--fw-medium);
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-accent);
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Badge Customization */
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-weight: var(--fw-semibold);
+    font-family: var(--font-accent);
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.badge-accent {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}

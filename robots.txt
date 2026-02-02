@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /components/
+
+# Sitemap location
+Sitemap: https://margadarsi.com/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

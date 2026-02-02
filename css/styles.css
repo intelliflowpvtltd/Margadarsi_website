@@ -1,0 +1,524 @@
+/* ============================================
+   MARGADARSI - Ultra Premium Real Estate Website
+   Main Stylesheet - Design System Foundation
+   ============================================ */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES - Design Tokens
+   ============================================ */
+:root {
+  /* ============================================
+     LUXURY COLOR PALETTE - Midnight Navy & Champagne Gold
+     ============================================ */
+
+  /* Primary Colors */
+  --color-primary: #F8F6F0;
+  /* Ivory Cream - Main Background */
+  --color-secondary: #1A2744;
+  /* Midnight Navy - Headlines, Buttons */
+  --color-accent: #C9A962;
+  /* Champagne Gold - CTAs, Highlights */
+  --color-white: #FFFFFF;
+  --color-black: #1A1A1A;
+
+  /* Gray Scale - Refined */
+  --color-gray-100: #F7F7F5;
+  --color-gray-200: #EAEAE6;
+  --color-gray-300: #D5D5D0;
+  --color-gray-400: #A1A19C;
+  --color-gray-500: #6B6B68;
+  --color-gray-600: #4A4A48;
+  --color-gray-700: #2D3436;
+  --color-gray-800: #1E1E1E;
+  --color-gray-900: #141414;
+
+  /* Navy Variations */
+  --color-maroon-light: #2C3E50;
+  /* Steel Blue */
+  --color-maroon-dark: #152238;
+  /* Deep Navy */
+  --color-maroon-darker: #0D1622;
+  /* Darkest Navy */
+
+  /* Gold Variations */
+  --color-gold-light: #E8D5A3;
+  /* Pale Gold */
+  --color-gold-dark: #A8893A;
+  /* Antique Gold */
+
+  /* Typography */
+  --font-primary: 'Playfair Display', serif;
+  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-accent: 'Montserrat', sans-serif;
+
+  /* Font Sizes - Fluid Typography */
+  --fs-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --fs-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --fs-md: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+  --fs-lg: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --fs-xl: clamp(2rem, 1.6rem + 2vw, 3rem);
+  --fs-2xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --fs-3xl: clamp(3rem, 2.5rem + 3vw, 5rem);
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+  --spacing-4xl: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Shadows - Refined Elevation System */
+  --shadow-sm: 0 1px 3px rgba(26, 39, 68, 0.06);
+  --shadow-md: 0 4px 12px rgba(26, 39, 68, 0.08);
+  --shadow-lg: 0 8px 24px rgba(26, 39, 68, 0.1);
+  --shadow-xl: 0 16px 40px rgba(26, 39, 68, 0.12);
+  --shadow-2xl: 0 24px 60px rgba(26, 39, 68, 0.15);
+  --shadow-maroon: 0 8px 32px rgba(26, 39, 68, 0.2);
+  --shadow-gold: 0 8px 32px rgba(201, 169, 98, 0.25);
+
+  /* Transitions - Smooth & Professional */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-Index Scale */
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ============================================
+   GOOGLE FONTS IMPORT
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ============================================
+   GLOBAL RESETS & BASE STYLES
+   ============================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-normal);
+  line-height: 1.6;
+  color: var(--color-gray-700);
+  background-color: var(--color-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+}
+
+h4 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+}
+
+h5 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+}
+
+h6 {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-maroon-light);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+.text-white {
+  color: var(--color-white) !important;
+}
+
+.text-maroon {
+  color: var(--color-secondary) !important;
+}
+
+.text-gold {
+  color: var(--color-accent) !important;
+}
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+
+.bg-accent {
+  background-color: var(--color-accent) !important;
+}
+
+.bg-white {
+  background-color: var(--color-white) !important;
+}
+
+.bg-maroon {
+  background-color: var(--color-secondary) !important;
+}
+
+.bg-gold {
+  background-color: var(--color-accent) !important;
+}
+
+.font-primary {
+  font-family: var(--font-primary) !important;
+}
+
+.font-secondary {
+  font-family: var(--font-secondary) !important;
+}
+
+.font-accent {
+  font-family: var(--font-accent) !important;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-maroon {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-maroon-dark) 100%);
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-gold-dark) 100%);
+}
+
+.bg-gradient-premium {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-maroon-dark) 50%, var(--color-accent) 100%);
+}
+
+/* Section Spacing */
+.section-padding {
+  padding: var(--spacing-4xl) 0;
+}
+
+.section-padding-sm {
+  padding: var(--spacing-2xl) 0;
+}
+
+.section-padding-lg {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .section-padding-lg {
+    padding: var(--spacing-3xl) 0;
+  }
+}
+
+/* Container Enhancements */
+.container-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* ============================================
+   BOOTSTRAP CUSTOMIZATION
+   ============================================ */
+/* Override Bootstrap Primary Colors */
+.btn-primary {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+  font-family: var(--font-accent);
+  font-weight: var(--fw-semibold);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--fs-sm);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-maroon-light);
+  border-color: var(--color-maroon-light);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: transparent;
+  font-family: var(--font-accent);
+  font-weight: var(--fw-semibold);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--fs-sm);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-accent);
+  font-weight: var(--fw-semibold);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--fs-sm);
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+  color: var(--color-white);
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: var(--fs-base);
+}
+
+.btn-sm {
+  padding: 0.625rem 1.5rem;
+  font-size: var(--fs-xs);
+}
+
+/* Card Customization - Clean & Minimal */
+.card {
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-base);
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-img-top {
+  border-radius: 0;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+  border: 2px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1.25rem;
+  font-size: var(--fs-base);
+  transition: all var(--transition-base);
+  background-color: var(--color-white);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(184, 149, 106, 0.1);
+  outline: none;
+}
+
+.form-label {
+  font-weight: var(--fw-medium);
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Badge Customization */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: var(--fw-semibold);
+  font-family: var(--font-accent);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.badge-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* ============================================
+   SCROLLBAR CUSTOMIZATION
+   ============================================ */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+  border: 3px solid var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* ============================================
+   SELECTION STYLING
+   ============================================ */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+@media (max-width: 576px) {
+  h1 {
+    font-size: var(--fs-2xl);
+  }
+
+  h2 {
+    font-size: var(--fs-xl);
+  }
+
+  h3 {
+    font-size: var(--fs-lg);
+  }
+
+  .btn-primary,
+  .btn-outline-primary,
+  .btn-accent {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--fs-xs);
+  }
+}

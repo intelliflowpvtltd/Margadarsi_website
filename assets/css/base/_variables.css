@@ -1,0 +1,111 @@
+/* ============================================
+   MARGADARSI - CSS Variables (Design Tokens)
+   assets/css/base/_variables.css
+   ============================================ */
+
+:root {
+    /* ============================================
+     LUXURY COLOR PALETTE - Midnight Navy & Champagne Gold
+     ============================================ */
+
+    /* Primary Colors */
+    --color-primary: #F8F6F0;
+    /* Ivory Cream - Main Background */
+    --color-secondary: #1A2744;
+    /* Midnight Navy - Headlines, Buttons */
+    --color-accent: #C9A962;
+    /* Champagne Gold - CTAs, Highlights */
+    --color-white: #FFFFFF;
+    --color-black: #1A1A1A;
+
+    /* Gray Scale - Refined */
+    --color-gray-100: #F7F7F5;
+    --color-gray-200: #EAEAE6;
+    --color-gray-300: #D5D5D0;
+    --color-gray-400: #A1A19C;
+    --color-gray-500: #6B6B68;
+    --color-gray-600: #4A4A48;
+    --color-gray-700: #2D3436;
+    --color-gray-800: #1E1E1E;
+    --color-gray-900: #141414;
+
+    /* Navy Variations */
+    --color-maroon-light: #2C3E50;
+    /* Steel Blue */
+    --color-maroon-dark: #152238;
+    /* Deep Navy */
+    --color-maroon-darker: #0D1622;
+    /* Darkest Navy */
+
+    /* Gold Variations */
+    --color-gold-light: #E8D5A3;
+    /* Pale Gold */
+    --color-gold-dark: #A8893A;
+    /* Antique Gold */
+
+    /* Typography */
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-accent: 'Montserrat', sans-serif;
+
+    /* Font Sizes - Fluid Typography */
+    --fs-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --fs-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+    --fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --fs-md: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+    --fs-lg: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    --fs-xl: clamp(2rem, 1.6rem + 2vw, 3rem);
+    --fs-2xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+    --fs-3xl: clamp(3rem, 2.5rem + 3vw, 5rem);
+
+    /* Font Weights */
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    /* Spacing Scale */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
+    --spacing-4xl: 8rem;
+
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-full: 9999px;
+
+    /* Shadows - Refined Elevation System */
+    --shadow-sm: 0 1px 3px rgba(26, 39, 68, 0.06);
+    --shadow-md: 0 4px 12px rgba(26, 39, 68, 0.08);
+    --shadow-lg: 0 8px 24px rgba(26, 39, 68, 0.1);
+    --shadow-xl: 0 16px 40px rgba(26, 39, 68, 0.12);
+    --shadow-2xl: 0 24px 60px rgba(26, 39, 68, 0.15);
+    --shadow-maroon: 0 8px 32px rgba(26, 39, 68, 0.2);
+    --shadow-gold: 0 8px 32px rgba(201, 169, 98, 0.25);
+
+    /* Transitions - Smooth & Professional */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 400ms ease;
+    --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* Z-Index Scale */
+    --z-base: 1;
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}

@@ -1,0 +1,110 @@
+/* ============================================
+   MARGADARSI - Utility Classes
+   assets/css/base/_utilities.css
+   ============================================ */
+
+/* Text Colors */
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.text-accent {
+    color: var(--color-accent) !important;
+}
+
+.text-white {
+    color: var(--color-white) !important;
+}
+
+.text-maroon {
+    color: var(--color-secondary) !important;
+}
+
+.text-gold {
+    color: var(--color-accent) !important;
+}
+
+/* Background Colors */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+.bg-accent {
+    background-color: var(--color-accent) !important;
+}
+
+.bg-white {
+    background-color: var(--color-white) !important;
+}
+
+.bg-maroon {
+    background-color: var(--color-secondary) !important;
+}
+
+.bg-gold {
+    background-color: var(--color-accent) !important;
+}
+
+/* Font Families */
+.font-primary {
+    font-family: var(--font-primary) !important;
+}
+
+.font-secondary {
+    font-family: var(--font-secondary) !important;
+}
+
+.font-accent {
+    font-family: var(--font-accent) !important;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-maroon {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-maroon-dark) 100%);
+}
+
+.bg-gradient-gold {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-gold-dark) 100%);
+}
+
+.bg-gradient-premium {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-maroon-dark) 50%, var(--color-accent) 100%);
+}
+
+/* Section Spacing */
+.section-padding {
+    padding: var(--spacing-4xl) 0;
+}
+
+.section-padding-sm {
+    padding: var(--spacing-2xl) 0;
+}
+
+.section-padding-lg {
+    padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .section-padding-lg {
+        padding: var(--spacing-3xl) 0;
+    }
+}
+
+/* Container Enhancements */
+.container-narrow {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}

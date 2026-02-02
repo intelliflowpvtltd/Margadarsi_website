@@ -1,0 +1,63 @@
+/* ============================================
+   MARGADARSI - Reset & Base Styles
+   assets/css/base/_reset.css
+   ============================================ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Global Resets */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-normal);
+    line-height: 1.6;
+    color: var(--color-gray-700);
+    background-color: var(--color-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+    border: 3px solid var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-dark);
+}
+
+/* Selection Styling */
+::selection {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+::-moz-selection {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}

@@ -1,0 +1,538 @@
+/* ============================================
+   HERO SPLIT SECTION - CLEAN PROFESSIONAL
+   Off-White Background Split Layout
+   ============================================ */
+
+.hero-split {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: stretch;
+    background-color: var(--color-primary);
+    margin-top: 80px;
+}
+
+.hero-split .container-fluid {
+    width: 100%;
+}
+
+.hero-split .row {
+    min-height: calc(100vh - 80px);
+}
+
+/* ============================================
+   LEFT SIDE - CONTENT
+   ============================================ */
+.hero-split-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: var(--color-primary);
+}
+
+.hero-split-content {
+    max-width: 520px;
+}
+
+/* Label Badge */
+.hero-label {
+    display: inline-block;
+    background-color: rgba(201, 169, 98, 0.12);
+    color: var(--color-accent);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+    font-family: var(--font-accent);
+    font-size: 0.75rem;
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.5rem;
+}
+
+/* Main Title */
+.hero-split-title {
+    font-size: 3.25rem;
+    font-weight: var(--fw-extrabold);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-primary);
+    color: var(--color-secondary);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-gold-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Subtitle */
+.hero-split-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-gray-600);
+    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+}
+
+/* Stats Section */
+.hero-split-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.hero-stat-item h3 {
+    font-size: 2rem;
+    font-weight: var(--fw-extrabold);
+    color: var(--color-accent);
+    margin-bottom: 0.25rem;
+    font-family: var(--font-primary);
+    line-height: 1;
+}
+
+.hero-stat-item p {
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--font-accent);
+}
+
+/* CTA Buttons */
+.hero-split-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary {
+    padding: 0.875rem 1.75rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-accent);
+    font-weight: var(--fw-semibold);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: background 0.25s ease, border-color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-hero-primary {
+    background: var(--color-secondary);
+    color: white;
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-hero-primary:hover {
+    background: var(--color-maroon-light);
+    border-color: var(--color-maroon-light);
+    color: white;
+}
+
+.btn-hero-secondary {
+    background-color: transparent;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-gray-300);
+}
+
+.btn-hero-secondary:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+/* ============================================
+   RIGHT SIDE - PROPERTY CARD SHOWCASE
+   ============================================ */
+.hero-split-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: var(--color-gray-100);
+}
+
+.hero-property-slider {
+    width: 100%;
+    max-width: 450px;
+}
+
+.property-slider-header,
+.slider-controls {
+    display: none;
+}
+
+/* Property Slider Container */
+.property-slider-container {
+    position: relative;
+}
+
+.hero-property-card {
+    display: none;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-property-card.active {
+    display: block;
+}
+
+/* Property Image */
+.hero-property-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero-property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Property Badges */
+.property-badge-new,
+.property-badge-featured,
+.property-badge-hot {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.35rem 0.875rem;
+    border-radius: var(--radius-full);
+    font-size: 0.65rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    z-index: 2;
+}
+
+.property-badge-new {
+    background-color: #059669;
+    color: white;
+}
+
+.property-badge-featured {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.property-badge-hot {
+    background-color: #D97706;
+    color: white;
+}
+
+/* Property Info */
+.hero-property-info {
+    padding: 1.25rem 1.5rem;
+}
+
+.hero-property-info h5 {
+    font-size: 1.1rem;
+    font-weight: var(--fw-bold);
+    color: var(--color-secondary);
+    margin-bottom: 0.4rem;
+    font-family: var(--font-primary);
+}
+
+.property-location {
+    color: var(--color-gray-500);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.property-location i {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+}
+
+/* Property Meta */
+.property-meta {
+    display: flex;
+    gap: 1.25rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+    margin-bottom: 1rem;
+}
+
+.property-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    color: var(--color-gray-600);
+}
+
+.property-meta i {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+}
+
+/* Price & Action */
+.property-price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.property-price {
+    font-size: 1.4rem;
+    font-weight: var(--fw-extrabold);
+    color: var(--color-secondary);
+    font-family: var(--font-primary);
+}
+
+.btn-view-details {
+    padding: 0.5rem 1rem;
+    background: var(--color-accent);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: background 0.25s ease;
+}
+
+.btn-view-details:hover {
+    background: var(--color-gold-dark);
+    color: white;
+}
+
+/* Slider Indicators */
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-gray-300);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.indicator.active {
+    background-color: var(--color-accent);
+}
+
+.indicator:hover {
+    background-color: var(--color-gray-400);
+}
+
+/* Hide Scroll Indicator */
+.scroll-indicator {
+    display: none;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 991px) {
+    .hero-split {
+        margin-top: 70px;
+        min-height: auto;
+        flex-direction: column;
+    }
+
+    .hero-split-left {
+        padding: 2.5rem 2rem;
+        order: 1;
+    }
+
+    .hero-split-right {
+        padding: 2.5rem 2rem;
+        min-height: auto;
+        order: 2;
+    }
+
+    .hero-split-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-split-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-split-stats {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .hero-split-cta {
+        justify-content: center;
+    }
+
+    .hero-property-slider {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust for navbar at top (no info bar) */
+    .hero-split {
+        margin-top: 60px;
+    }
+
+    .hero-split-left {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero-split-title {
+        font-size: 2rem;
+    }
+
+    .hero-split-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-split-stats {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-stat-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero-split-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .property-slider-container {
+        height: 460px;
+    }
+
+    .hero-property-image {
+        height: 220px;
+    }
+
+    .hero-property-slider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-split {
+        margin-top: 60px;
+    }
+
+    .hero-split-left {
+        padding: 1.75rem 1rem;
+    }
+
+    .hero-split-right {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-label {
+        font-size: 0.65rem;
+        padding: 0.4rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-split-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-split-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-split-stats {
+        gap: 0.75rem;
+        padding: 1rem 0;
+        flex-wrap: wrap;
+    }
+
+    .hero-stat-item {
+        flex: 1;
+        min-width: 80px;
+        text-align: center;
+    }
+
+    .hero-stat-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .hero-stat-item p {
+        font-size: 0.65rem;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.75rem;
+    }
+
+    .hero-property-image {
+        height: 180px;
+    }
+
+    .hero-property-info {
+        padding: 0.875rem 1rem;
+    }
+
+    .hero-property-info h5 {
+        font-size: 1rem;
+    }
+
+    .property-location {
+        font-size: 0.75rem;
+    }
+
+    .property-meta {
+        gap: 0.75rem;
+        padding: 0.6rem 0;
+    }
+
+    .property-meta span {
+        font-size: 0.7rem;
+    }
+
+    .property-price {
+        font-size: 1.15rem;
+    }
+
+    .btn-view-details {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.7rem;
+    }
+
+    .slider-indicators {
+        margin-top: 1rem;
+    }
+}

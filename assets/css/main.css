@@ -1,0 +1,78 @@
+/* ============================================
+   MARGADARSI - Main CSS Entry Point
+   assets/css/main.css
+   
+   This file imports all modular CSS files in the correct order.
+   Use this file as a single entry point for the production bundle.
+   ============================================ */
+
+/* ============================================
+   1. BASE STYLES
+   Foundation styles that must load first
+   ============================================ */
+@import 'base/_variables.css';
+@import 'base/_reset.css';
+@import 'base/_typography.css';
+@import 'base/_utilities.css';
+@import 'base/_bootstrap-overrides.css';
+
+/* ============================================
+   2. COMPONENTS
+   Reusable UI components
+   ============================================ */
+@import 'components/components.css';
+@import 'components/animations.css';
+
+/* ============================================
+   3. LAYOUTS
+   Page layout structures
+   ============================================ */
+@import 'layouts/hero-split.css';
+
+/* ============================================
+   4. PAGE-SPECIFIC STYLES
+   Styles for individual pages
+   ============================================ */
+/* Import only the page-specific CSS needed for each page:
+   - For property-detail.html: @import 'pages/property-detail.css';
+   - For gallery.html/property.html: @import 'pages/gallery.css';
+   - For contact.html: @import 'pages/contact.css';
+*/
+
+/* ============================================
+   FILE STRUCTURE REFERENCE:
+   
+   assets/
+   ├── css/
+   │   ├── base/
+   │   │   ├── _variables.css    (Design tokens)
+   │   │   ├── _reset.css        (Resets & fonts)
+   │   │   ├── _typography.css   (Headings, text)
+   │   │   ├── _utilities.css    (Helper classes)
+   │   │   └── _bootstrap-overrides.css
+   │   ├── components/
+   │   │   ├── components.css    (Navigation, cards, footer)
+   │   │   └── animations.css    (Scroll animations)
+   │   ├── layouts/
+   │   │   └── hero-split.css    (Hero section layout)
+   │   ├── pages/
+   │   │   ├── property-detail.css
+   │   │   ├── gallery.css
+   │   │   └── contact.css
+   │   └── main.css              (This file)
+   ├── js/
+   │   ├── core/
+   │   │   ├── main.js           (Core functionality)
+   │   │   ├── animations.js     (Scroll animations)
+   │   │   └── forms.js          (Form handling)
+   │   ├── components/
+   │   │   └── hero-slider.js    (Hero slider)
+   │   └── pages/
+   │       └── gallery.js        (Gallery filtering)
+   └── images/
+       ├── logo/                 (Brand logos)
+       ├── hero/                 (Hero section images)
+       ├── properties/           (Property images)
+       ├── team/                 (Team member photos)
+       └── misc/                 (Gallery, contact images)
+   ============================================ */

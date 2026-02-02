@@ -1,9 +1,14 @@
+# Robots.txt for Margadarsi Infra
+# https://margadarsiinfra.com
+
 User-agent: *
 Allow: /
-Disallow: /components/
 
 # Sitemap location
-Sitemap: https://margadarsi.com/sitemap.xml
+Sitemap: https://margadarsiinfra.com/sitemap.xml
+
+# Disallow admin/backend paths
+Disallow: /components/
 
 # Crawl-delay for politeness
 Crawl-delay: 1
